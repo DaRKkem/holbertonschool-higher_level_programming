@@ -6,4 +6,3 @@ def uppercase(str):
                 if 'a' <= c <= 'z' else c)
         print("{}".format(char), end="")
     print()
-    
