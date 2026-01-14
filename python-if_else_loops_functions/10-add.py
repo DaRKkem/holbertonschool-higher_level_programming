@@ -2,7 +2,3 @@
 def add(a, b):
 	""" Add two integers and return the result """
 	return a + b
-
-print(add(1, 2))
-print(add(98, 0))
-print(add(100, -2))
