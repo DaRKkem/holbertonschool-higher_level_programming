@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
-    """
-    Return the addition of 'a' and 'b' casted to integers.
-    """
-    if not isinstance(a, (int, float)):
+    """Add two integers."""
+    if type(a) not in (int, float)
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if type(b) not in (int, float)
         raise TypeError("b must be an integer")
     a = int(a)
     b = int(b)
