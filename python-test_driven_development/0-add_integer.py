@@ -5,12 +5,11 @@
 def add_integer(a, b=98):
     """Add two integers."""
 
-    if type(a) not in (int, float) or type(a) is bool:
+    if not isinstance(a, (int, float)) or isinstance(a, bool):
         raise TypeError("a must be an integer")
 
-    if type(b) not in (int, float) or type(b) is bool:
+    if not isinstance(b, (int, float)) or isinstance(b, bool):
         raise TypeError("b must be an integer")
-
 
     a = int(a)
     b = int(b)
