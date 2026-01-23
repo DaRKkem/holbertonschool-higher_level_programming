@@ -16,7 +16,6 @@ Basic usage
     
     How are you?
 
-
 Multiple punctuation
 ====================
 
@@ -27,7 +26,6 @@ Multiple punctuation
     
     Third line?
 
-
 Leading and trailing spaces
 ===========================
 
@@ -36,12 +34,10 @@ Leading and trailing spaces
     
     Space after?
 
-
 Empty string
 ============
 
     >>> text_indentation("")
-
 
 TypeError if not string
 =======================
@@ -55,7 +51,6 @@ TypeError if not string
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
-
 
 Multiple lines, multiple punctuations
 =====================================
