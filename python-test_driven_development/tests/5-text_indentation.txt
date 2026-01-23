@@ -62,3 +62,27 @@ Multiple lines, multiple punctuations
     Non autem hoc:
     
     Plus semper voluptatis?
+
+Mixed spacing and punctuation
+=============================
+
+    >>> text_indentation(" A. B? C: D")
+    A.
+    
+    B?
+    
+    C:
+    
+    D
+
+Single word, no punctuation
+===========================
+
+    >>> text_indentation("Holberton School")
+    Holberton School
+
+Trailing punctuation only
+=========================
+
+    >>> text_indentation("End here:")
+    End here:
