@@ -27,22 +27,21 @@ def text_indentation(text):
 
     while i < length:
         line = ""
-
+        # Collect characters until a punctuation
         while i < length and text[i] not in end_chars:
             line += text[i]
             i += 1
         line = line.strip()
         if line:
             print(line)
-
+        # Print punctuation if exists
         if i < length and text[i] in end_chars:
-
+            # On imprime la ponctuation
             print(text[i], end="")
             i += 1
-
+            # Ajoute 2 sauts de ligne seulement si ce n'est pas la fin du texte
             if i < length:
                 print("\n")
-            else:
-                print(end="")
+        # Skip spaces after punctuation
         while i < length and text[i] == " ":
             i += 1
