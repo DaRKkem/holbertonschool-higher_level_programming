@@ -14,7 +14,7 @@ Basic usage
     >>> text_indentation("Hello world. How are you?")
     Hello world
     .
-    
+
     How are you
     ?
 
@@ -25,31 +25,30 @@ Multiple punctuation
     >>> text_indentation("First line: second line. Third line?")
     First line
     :
-    
+
     second line
     .
-    
+
     Third line
     ?
 
 
-Edge cases
-==========
-
-Leading and trailing spaces:
+Leading and trailing spaces
+===========================
 
     >>> text_indentation("  Space before.  Space after? ")
     Space before
-    .
-    
+    :
+
     Space after
     ?
 
 
-Empty string:
+Empty string
+============
 
     >>> text_indentation("")
-    
+
 
 TypeError if not string
 =======================
@@ -63,3 +62,20 @@ TypeError if not string
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+
+Multiple lines, multiple punctuations
+=====================================
+
+    >>> text_indentation("Lorem ipsum. Quonam modo? Non autem hoc: Plus semper voluptatis?")
+    Lorem ipsum
+    .
+
+    Quonam modo
+    ?
+
+    Non autem hoc
+    :
+
+    Plus semper voluptatis
+    ?
