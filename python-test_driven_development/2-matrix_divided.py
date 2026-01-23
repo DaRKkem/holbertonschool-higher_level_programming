@@ -29,6 +29,7 @@ def matrix_divided(matrix, div):
         raise TypeError(error_msg)
 
     row_length = None
+
     for row in matrix:
         if not isinstance(row, list) or len(row) == 0:
             raise TypeError(error_msg)
