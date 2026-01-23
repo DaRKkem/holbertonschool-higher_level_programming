@@ -24,7 +24,7 @@ def text_indentation(text):
         # Skip leading spaces at the beginning of a line
         while i < len(text) and text[i] == ' ':
             i += 1
-        
+
         # Print characters until we hit punctuation or end
         while i < len(text):
             print(text[i], end="")
