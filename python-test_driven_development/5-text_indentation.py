@@ -41,6 +41,3 @@ def text_indentation(text):
 
         while i < length and text[i] == " ":
             i += 1
-
-text_indentation("Lorem ipsum. Quonam modo? Non autem hoc: Plus semper voluptatis?")
-text_indentation("Hello world. How are you?")
