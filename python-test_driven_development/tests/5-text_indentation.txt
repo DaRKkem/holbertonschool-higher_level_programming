@@ -7,7 +7,6 @@ This module defines a function ``text_indentation(text)``.
 Importing the function:
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
-
 Basic usage
 ===========
 
@@ -57,3 +56,9 @@ Multiple lines, multiple punctuations
 
     >>> text_indentation("Lorem ipsum. Quonam modo? Non autem hoc: Plus semper voluptatis?")
     Lorem ipsum.
+    
+    Quonam modo?
+    
+    Non autem hoc:
+    
+    Plus semper voluptatis?
