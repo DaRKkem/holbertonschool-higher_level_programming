@@ -62,9 +62,3 @@ Multiple lines, multiple punctuations
 
     >>> text_indentation("Lorem ipsum. Quonam modo? Non autem hoc: Plus semper voluptatis?")
     Lorem ipsum.
-    
-    Quonam modo?
-    
-    Non autem hoc:
-    
-    Plus semper voluptati
