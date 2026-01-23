@@ -27,20 +27,22 @@ def text_indentation(text):
 
     while i < length:
         line = ""
-        # Collect characters until a punctuation
+
         while i < length and text[i] not in end_chars:
             line += text[i]
             i += 1
         line = line.strip()
         if line:
             print(line)
-        # Print punctuation if exists
+
         if i < length and text[i] in end_chars:
-            print(text[i])
+
+            print(text[i], end="")
             i += 1
-        # Only add a newline if not at the end of text
-        if i < length:
-            print()
-        # Skip spaces after punctuation
+
+            if i < length:
+                print("\n")
+            else:
+                print(end="")
         while i < length and text[i] == " ":
             i += 1
