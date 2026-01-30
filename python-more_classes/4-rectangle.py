@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#!/usr/bin/python3
 """This module defines a Rectangle class."""
 
 
@@ -46,7 +47,7 @@ class Rectangle:
         """Return the perimeter of the rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
-        return 2 * (self.width + self.height)
+        return self.width * 2 + self . height * 2
 
     def __str__(self):
         """Return the string representation of the rectangle with #"""
@@ -56,6 +57,7 @@ class Rectangle:
         lines = []
         for _ in range(self.height):
             lines.append("#" * self.width)
+
         return "\n".join(lines)
 
     def __repr__(self):
