@@ -61,5 +61,5 @@ class Rectangle:
         return "\n".join(lines)
 
     def __repr__(self):
-        """Return a string representation of the rectangle for reproduction"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        """Return a string representation to recreate the rectangle"""
+        return f"Rectangle({self.width}, {self.height})"
