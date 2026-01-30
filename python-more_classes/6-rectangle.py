@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle class with a counter of instances.
-"""
+"""This module defines a Rectangle class with a counter of instances."""
 
 
 class Rectangle:
@@ -64,6 +62,6 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        """Print a message when an instance is deleted and decrement counter."""
+        """Print a message when an instance of Rectangle is deleted."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
