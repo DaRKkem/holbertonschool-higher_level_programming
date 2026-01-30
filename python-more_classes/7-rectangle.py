@@ -5,8 +5,8 @@
 class Rectangle:
     """A class that defines a rectangle by its width and height."""
 
-    number_of_instances = 0  # class attribute
-    print_symbol = "#"       # class attribute pour affichage
+    number_of_instances = 0
+    symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize rectangle with optional width and height."""
@@ -53,10 +53,10 @@ class Rectangle:
         return 2 * (self.width + self.height)
 
     def __str__(self):
-        """Return the rectangle using the character(s) stored in print_symbol."""
+        """Return the rectangle using the '#' character."""
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self.width for _ in range(self.height)])
+        return "\n".join([str(self.symbol) * self.width for _ in range(self.height)])
 
     def __repr__(self):
         """Return a string representation to recreate the rectangle."""
