@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Module that defines a MyList class."""
 
+def is_same_class(obj, a_class):
+	"""Check if an object is exactly an instance of a given class.
 
-class MyList(list):
-    """Class that inherits from list."""
+	Args:
+		obj: The object to check.
+		a_class: The class to compare against.
 
-    def print_sorted(self):
-        """Print the list sorted in ascending order."""
-        print(sorted(self))
+	Returns:
+		True if obj is exactly an instance of a_class, False otherwise.
+	"""
+	return type(obj) is a_class
