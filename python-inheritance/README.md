@@ -52,43 +52,47 @@ class Animal:
 
     def speak(self):
         return "Some sound"
-Classe enfant (héritage) :
-python
-Copier le code
+```
+
+### Classe enfant (héritage) :
+```python
 class Dog(Animal):
     pass
+```
 Dog hérite automatiquement de name et speak().
 
-Override d’une méthode :
-python
-Copier le code
+### Override d’une méthode :
+```python
 class Dog(Animal):
     def speak(self):
         return "Woof!"
+```
 On redéfinit le comportement de la classe parente.
 
-Utilisation de super() :
-python
-Copier le code
+### Utilisation de super() :
+```python
 class Dog(Animal):
     def __init__(self, name, breed):
         super().__init__(name)
         self.breed = breed
 super() permet d’appeler le constructeur de la classe parente.
+```
 
-Utilisation :
-python
-Copier le code
+### Utilisation :
+```python
 dog = Dog("Rex", "Labrador")
 
 print(dog.name)
-print(dog.speak())
+print(dog.speak())%
+```
+
 🚀 Lancer le projet :
-bash
-Copier le code
+```bash
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 python3 main.py
+```
+
 🛠️ Technologies
 Python 3
 
