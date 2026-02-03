@@ -3,8 +3,7 @@
 
 
 class VerboseList(list):
-    """Within VerboseList, override the methods
-    that modify the list: append, extend, remove, and pop."""
+    """A list that prints messages on modifications."""
 
     def append(self, item):
         """Append an item to the list and print a message."""
