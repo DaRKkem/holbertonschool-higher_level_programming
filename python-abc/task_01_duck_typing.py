@@ -46,4 +46,12 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """Return rectangle perimeter."""
-        return self.width * 2 + self.height * 2
+        return 2* (self.width + self.height)
+
+def shape_info(shape):
+    """Print area and perimeter of any object implementing area() and perimeter().
+
+    Uses duck typing: no isinstance checks.
+    """
+    print("Area:", shape.area())
+    print("Perimeter:", shape.perimeter())
