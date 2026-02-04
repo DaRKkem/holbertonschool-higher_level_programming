@@ -1,46 +1,87 @@
 The ``7-base_geometry`` module
 =============================
 
-Using ``BaseGeometry``
-----------------------
-
-Import class:
+Import class
+------------
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Create instance:
+
+Instance creation
+----------------
 
     >>> bg = BaseGeometry()
-    >>> bg
-    <7-base_geometry.BaseGeometry object at ...>
+    >>> isinstance(bg, BaseGeometry)
+    True
 
-Test area() not implemented:
+
+area() not implemented
+----------------------
 
     >>> bg.area()
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
 
-Test integer_validator valid values:
+
+integer_validator valid integers
+--------------------------------
 
     >>> bg.integer_validator("width", 10)
-    >>> bg.integer_validator("height", 5)
+    >>> bg.integer_validator("height", 1)
+    >>> bg.integer_validator("size", 999)
 
-Test TypeError:
+
+Return value must be None
+-------------------------
+
+    >>> print(bg.integer_validator("test", 5))
+    None
+
+
+TypeError cases
+---------------
 
     >>> bg.integer_validator("size", "hello")
     Traceback (most recent call last):
     ...
     TypeError: size must be an integer
 
-Test ValueError:
+    >>> bg.integer_validator("size", 3.14)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> bg.integer_validator("size", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+
+ValueError cases
+----------------
 
     >>> bg.integer_validator("size", 0)
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
 
-    >>> bg.integer_validator("size", -4)
+    >>> bg.integer_validator("size", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be greater than 0
+
+    >>> bg.integer_validator("size", -100)
     Traceback (most recent call last):
     ...
     ValueError: size must be greater than 0
