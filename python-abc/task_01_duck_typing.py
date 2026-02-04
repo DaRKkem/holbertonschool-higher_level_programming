@@ -52,8 +52,7 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print area and perimeter of any object implementing area()
-       and perimeter(). Uses duck typing: no isinstance checks."""
+    """Print."""
 
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
