@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
+from math import pi
 """ This module defines an abstracted Shape
     class and its concrete subclasses. """
 
@@ -26,12 +27,10 @@ class Circle(Shape):
 
     def area(self):
         """Return circle area."""
-        from math import pi
         return self.radius ** 2 * pi
 
     def perimeter(self):
         """Return circle perimeter."""
-        from math import pi
         return self.radius * 2 * pi
 
 
@@ -52,7 +51,8 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
-    """Print."""
+    """Print area and perimeter of any object implementing area()
+       and perimeter(). Uses duck typing: no isinstance checks."""
 
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
