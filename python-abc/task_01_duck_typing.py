@@ -23,7 +23,7 @@ class Circle(Shape):
     """Concrete class representing a circle."""
 
     def __init__(self, radius):
-        self.radius = abs(radius)
+        self.radius = abs(radius) # If radius is negative then radius -= radius
 
     def area(self):
         """Return circle area."""
