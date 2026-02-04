@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
-""" This module defines an abstracted Animal
-    class and its concrete subclasses. """
+"""This module defines an abstracted Animal
+   class and its concrete subclasses."""
 
 
 class Animal(ABC):

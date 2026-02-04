@@ -17,6 +17,7 @@ class Shape(ABC):
         """Abstract method representing shape perimeter."""
         pass
 
+
 class Circle(Shape):
     """Concrete class representing a circle."""
 
@@ -33,6 +34,7 @@ class Circle(Shape):
         from math import pi
         return self.radius * 2 * pi
 
+
 class Rectangle(Shape):
     """Concrete class representing a rectangle."""
 
@@ -46,12 +48,11 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """Return rectangle perimeter."""
-        return 2* (self.width + self.height)
+        return 2 * (self.width + self.height)
 
 def shape_info(shape):
-    """Print area and perimeter of any object implementing area() and perimeter().
-
-    Uses duck typing: no isinstance checks.
-    """
+    """Print area and perimeter of any object implementing area()
+       and perimeter(). Uses duck typing: no isinstance checks."""
+    
     print("Area:", shape.area())
     print("Perimeter:", shape.perimeter())
