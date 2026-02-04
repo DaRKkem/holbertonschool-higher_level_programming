@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
 from math import pi
-""" This module defines an abstracted Shape
-    class and its concrete subclasses. """
+"""This module defines an abstracted Shape
+   class and its concrete subclasses."""
 
 
 class Shape(ABC):
@@ -23,7 +23,7 @@ class Circle(Shape):
     """Concrete class representing a circle."""
 
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Return circle area."""
