@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module defining CountedIterator that tracks iteration count."""
+"""This module defines a CountedIterator class that wraps an iterable"""
 
 
 class CountedIterator:
