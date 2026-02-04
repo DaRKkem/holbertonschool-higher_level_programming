@@ -8,7 +8,7 @@ class Animal(ABC):
     """Abstract base class for animals."""
 
     @abstractmethod
-    def speak(self):
+    def sound(self):
         """Abstract method representing animal sound."""
         pass
 
@@ -16,7 +16,7 @@ class Animal(ABC):
 class Dog(Animal):
     """Concrete class representing a dog."""
 
-    def speak(self):
+    def sound(self):
         """Return dog sound."""
         return "Bark"
 
@@ -24,6 +24,6 @@ class Dog(Animal):
 class Cat(Animal):
     """Concrete class representing a cat."""
 
-    def speak(self):
+    def sound(self):
         """Return cat sound."""
         return "Meow"
