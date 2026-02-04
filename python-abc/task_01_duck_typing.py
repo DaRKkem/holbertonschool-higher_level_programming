@@ -50,6 +50,7 @@ class Rectangle(Shape):
         """Return rectangle perimeter."""
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """Print area and perimeter of any object implementing area()
        and perimeter(). Uses duck typing: no isinstance checks."""
