@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""This module defines a function that returns"""
 
-def to_json_string(my_obj):
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+
+def from_json_string(my_str):
+    """Returns the Python object represented by a JSON string"""
+    import json
+    return json.loads(my_str)
