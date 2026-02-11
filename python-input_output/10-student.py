@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a Student class
-   with JSON serialization capabilities."""
+"""This module defines a Student class with JSON serialization capabilities."""
 
 
 class Student:
@@ -15,5 +14,8 @@ class Student:
     def to_json(self, attrs=None):
         """Retrieve a dictionary representation of the student."""
         if isinstance(attrs, list) and all(isinstance(x, str) for x in attrs):
-            return {key: self.__dict__[key] for key in attrs if key in self.__dict__}
+            return {
+                key: self.__dict__[key]
+                for key in attrs
+                if key in self.__dict__}
         return dict(self.__dict__)
