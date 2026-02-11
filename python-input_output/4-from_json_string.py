@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module defines a function that returns"""
+"""This module defines a function that returns
+   the Python object represented by a JSON string"""
 
 
 def from_json_string(my_str):
