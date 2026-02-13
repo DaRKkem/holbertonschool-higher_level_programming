@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module for pickling custom classes."""
+"""This module is for pickling custom classes."""
 import pickle
 
 
