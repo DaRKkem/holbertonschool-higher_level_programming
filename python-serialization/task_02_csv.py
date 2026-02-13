@@ -1,27 +1,23 @@
-#!/usr/bin/python3
-"""Module for XML serialization and deserialization."""
-import xml.etree.ElementTree as ET
+#!/usr/bin/env python3
+"""Module to convert CSV data to JSON format."""
+import csv
+import json
 
 
-def serialize_to_xml(dictionary, filename):
-    """Serialize a Python dictionary to an XML file."""
-    root = ET.Element("data")
+def convert_csv_to_json(csv_filename):
+    """Convert a CSV file to JSON format and save it to data.json."""
+    try:
+        data = []
 
-    for key, value in dictionary.items():
-        child = ET.SubElement(root, key)
-        child.text = str(value)
+        with open(csv_filename, newline='') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                data.append(row)
 
-    tree = ET.ElementTree(root)
-    tree.write(filename)
+        with open("data.json", "w") as jsonfile:
+            json.dump(data, jsonfile, indent=4)
 
+        return True
 
-def deserialize_from_xml(filename):
-    """Deserialize an XML file into a Python dictionary."""
-    tree = ET.parse(filename)
-    root = tree.getroot()
-
-    result = {}
-    for child in root:
-        result[child.tag] = child.text
-
-    return result
+    except Exception:
+        return False
