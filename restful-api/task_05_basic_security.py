@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Task 05 - API Security with Basic Auth and JWT
-"""
+"""Task 05 - API Security with Basic Auth and JWT"""
 
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
