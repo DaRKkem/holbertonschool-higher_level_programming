@@ -1,21 +1,15 @@
 #!/usr/bin/python3
-"""
-Task 03 - Simple API using http.server
-"""
+"""Task 03 - Simple API using http.server"""
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 
 class SimpleAPIHandler(BaseHTTPRequestHandler):
-    """
-    Custom request handler for our simple API.
-    """
+    """Custom request handler for our simple API."""
 
     def do_GET(self):
-        """
-        Handle GET requests and route endpoints.
-        """
+        """Handle GET requests and route endpoints."""
 
         if self.path == "/":
             self.send_response(200)
@@ -62,9 +56,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
 
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler):
-    """
-    Start the HTTP server on port 8000.
-    """
+    """Start the HTTP server on port 8000."""
     server_address = ("", 8000)
     httpd = server_class(server_address, handler_class)
     print("Starting server on port 8000...")

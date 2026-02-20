@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Task 04 - Simple REST API using Flask
-"""
+"""Task 04 - Simple REST API using Flask"""
 
 from flask import Flask, jsonify, request
 
@@ -23,17 +21,13 @@ def status():
 
 @app.route("/data", methods=["GET"])
 def get_usernames():
-    """
-    Return a list of all usernames stored in the API.
-    """
+    """Return a list of all usernames stored in the API."""
     return jsonify(list(users.keys()))
 
 
 @app.route("/users/<username>", methods=["GET"])
 def get_user(username):
-    """
-    Return full user object if exists.
-    """
+    """Return full user object if exists."""
     if username not in users:
         return jsonify({"error": "User not found"}), 404
 
@@ -42,9 +36,7 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    """
-    Add a new user to the API.
-    """
+    """Add a new user to the API."""
 
     # Check if JSON is valid
     if not request.is_json:
