@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Retrieves a State object by its name and displays its id"""
 
