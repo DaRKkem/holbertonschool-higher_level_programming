@@ -1,4 +1,1 @@
-console.log('Hello, World!');
-alert('JavaScript was born in 10 days!');
-
-
+document.querySelector('header').style.color = '#FF0000';
