@@ -1,75 +1,71 @@
-<p align="center">
-  <img width="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# RESTful API
 
-<h3 align="center">API REST in Python</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![Flask](https://img.shields.io/badge/Flask-3.x-lightgrey) ![License](https://img.shields.io/badge/License-Holberton-yellow)
+
+Introduction to designing and consuming RESTful APIs. This project covers making HTTP requests with the `requests` library, building a raw HTTP server from scratch, creating a Flask-based REST API, and adding basic authentication for security.
 
 ---
 
-## 📌 Description
+## Tasks / Files
 
-Ce projet introduit les fondamentaux des RESTful APIs et la
-communication client-serveur sur le web.
+### 2. Consuming APIs with requests
+**File:** `task_02_requests.py`
 
-Il couvre :
+Use the `requests` library to perform GET, POST, PUT, and DELETE requests against a public REST API. Handle JSON responses and HTTP status codes.
 
--   Le fonctionnement du protocole HTTP / HTTPS\
--   La structure des requêtes et réponses HTTP\
--   Les méthodes HTTP (GET, POST, PUT, DELETE...)\
--   Les codes de statut HTTP\
--   La consommation d'API avec curl\
--   Le développement d'API en Python\
--   Les bases de la sécurité et de l'authentification\
--   La documentation d'API avec OpenAPI
+```python
+import requests
 
-Ce projet est idéal pour comprendre comment les systèmes modernes
-échangent des données et interagissent à travers Internet.
+response = requests.get("https://api.example.com/data")
+data = response.json()
+```
 
-------------------------------------------------------------------------
+### 3. Basic HTTP server
+**File:** `task_03_http_server.py`
 
-## 📚 Concepts abordés
+Build a basic HTTP server from scratch using Python's `http.server` module. Handle different HTTP methods and return appropriate status codes.
 
--   Architecture REST (Representational State Transfer)\
--   Communication Client / Serveur\
--   Structure d'une requête HTTP\
--   Structure d'une réponse HTTP\
--   Méthodes HTTP\
--   Codes de statut HTTP\
--   API Testing avec curl\
--   Sécurité (HTTPS, authentification, autorisation)\
--   Documentation standardisée des API
+### 4. Flask REST API
+**File:** `task_04_flask.py`
 
-------------------------------------------------------------------------
+Develop a REST API using Flask with routes for CRUD operations and JSON responses.
 
-## 🔄 Fonctionnement d'une API REST
+```python
+from flask import Flask, jsonify
 
-1.  Le client envoie une requête HTTP/HTTPS.
-2.  Le serveur web reçoit et transmet la requête.
-3.  Le serveur API traite la logique métier.
-4.  Interaction éventuelle avec une base de données.
-5.  Retour d'une réponse HTTP au client.
+app = Flask(__name__)
 
-------------------------------------------------------------------------
+@app.route('/api/status', methods=['GET'])
+def status():
+    return jsonify({"status": "OK"})
+```
 
-## 🛠️ Technologies utilisées
+### 5. Basic API security
+**File:** `task_05_basic_security.py`
 
--   HTTP / HTTPS\
--   curl\
--   Python\
--   Flask\
--   JSON
+Add basic authentication (username/password or token-based) to protect API endpoints.
 
-------------------------------------------------------------------------
+---
 
-## 🎯 Objectifs pédagogiques
+## Key Concepts
 
--   Comprendre les bases du protocole HTTP\
--   Différencier HTTP et HTTPS\
--   Manipuler des API via la ligne de commande\
--   Développer une API simple en Python\
--   Sécuriser et documenter une API
+- REST architecture principles (stateless, resource-based, uniform interface)
+- HTTP methods: GET, POST, PUT, DELETE, PATCH
+- Flask route definition and JSON response formatting
+- Request/response cycle and HTTP status codes (200, 201, 400, 401, 404, 500)
+- API authentication basics (Basic Auth, token-based)
+- `requests` library for consuming third-party APIs
+- Testing APIs with `curl`
 
-------------------------------------------------------------------------
+---
 
-✍️ Auteur :\
-DaRKkem
+Repository
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: restful-api
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

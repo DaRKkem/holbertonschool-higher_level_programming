@@ -1,5 +1,11 @@
 # SQL -- More Queries
 
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+
+```sql
+SELECT tv_shows.title FROM tv_shows INNER JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id;
+```
+
 Advanced MySQL concepts including user and privilege management, column constraints, JOINs across multiple tables, subqueries, and aggregation with the `hbtn_0d_tvshows` database schema (shows and genres).
 
 ---
@@ -70,6 +76,13 @@ Advanced MySQL concepts including user and privilege management, column constrai
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: SQL_more_queries
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

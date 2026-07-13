@@ -1,5 +1,11 @@
 # SQL -- Introduction
 
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+
+```sql
+SELECT score, name FROM second_table ORDER BY score DESC;
+```
+
 A foundational project covering MySQL Data Definition Language (DDL) and Data Manipulation Language (DML). Tasks progress from creating and dropping databases to inserting, selecting, updating, deleting records, and using aggregate functions, filtering, grouping, and sorting.
 
 ---
@@ -73,6 +79,13 @@ Lists all databases on the MySQL server.
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: SQL_introduction
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

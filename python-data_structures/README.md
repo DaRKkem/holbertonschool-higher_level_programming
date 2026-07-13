@@ -1,58 +1,52 @@
-<p align="center">
-  <img width="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# Python Data Structures
 
-<h3 align="center">Python Data Structures</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
----
-
-## 📌 Description
-
-Ce projet présente les **structures de données en Python**, principalement les **listes**, ainsi que leurs méthodes courantes comme `.append()`, `.remove()`, `.pop()`, etc.  
-Il est destiné aux débutants souhaitant comprendre les bases de la manipulation de données en Python.
+Working with Python's built-in data structures: lists, tuples, and related operations.
 
 ---
 
-## 📚 Structures abordées
+## Tasks / Files
 
-- Listes (`list`)
-- Dictionnaires (`dict`)
-- Tuples (`tuple`)
-- Ensembles (`set`)
-
----
-
-## ▶️ Exemples d'utilisation
-
-### Listes
+- **0-print_list_integer.py** - Prints a list of integers.
+- **1-element_at.py** - Retrieves an element from a list.
+- **2-replace_in_list.py** - Replaces an element in a list at a specific position.
+- **3-print_reversed_list_integer.py** - Prints a list of integers in reverse.
+- **4-new_in_list.py** - Replaces an element without modifying the original list.
+- **5-no_c.py** - Removes all characters 'c' and 'C' from a string.
+- **6-print_matrix_integer.py** - Prints a matrix of integers.
+- **7-add_tuple.py** - Adds two tuples element-wise.
+- **8-multiple_returns.py** - Returns the length and first character of a sentence.
+- **9-max_integer.py** - Finds the biggest integer in a list.
+- **10-divisible_by_2.py** - Finds all multiples of 2 in a list.
+- **11-delete_at.py** - Deletes an item at a specific position in a list.
+- **12-switch.py** - Switches the values of two variables.
 
 ```python
-numbers = [1, 2, 3]
+my_list = [1, 2, 3, 4]
+my_list.append(5)
+```
 
-numbers.append(4)
-numbers.remove(2)
+---
 
-print(numbers)
-Dictionnaires
-python
-Copier le code
-user = {
-    "name": "Alice",
-    "age": 25
-}
+## Key Concepts
 
-user["age"] = 26
-print(user)
-🚀 Lancer le projet
-bash
-Copier le code
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-🛠️ Technologies
-Python 3
+- lists
+- list methods (append, remove, pop)
+- tuples
+- tuple packing/unpacking
+- list comprehensions
+- matrix operations
 
-Structures de données natives
+---
 
-✍️ Auteur
-DaRKkem
+Repository
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-data_structures
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

@@ -1,74 +1,50 @@
-<p align="center">
-  <a href="" rel="noopener">
-    <img width="200px" height="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-  </a>
-</p>
+# Python Import & Modules
 
-<h3 align="center">Project Title</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<div align="center">
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-</div>
+Organizing Python code into modules: importing functions, handling command-line arguments, and understanding namespaces.
 
 ---
 
-<p align="center">
-A few lines describing your Python project and its purpose.
-</p>
+## Tasks / Files
 
-## 📝 Table of Contents
+- **0-add.py** - Imports a function from a module and uses it.
+- **1-calculation.py** - Imports multiple functions from a module.
+- **2-args.py** - Prints the number of and list of command-line arguments using `sys.argv`.
+- **3-infinite_add.py** - Infinite addition of variable arguments passed on the command line.
+- **4-hidden_discovery.py** - Discovers all names defined in a compiled module using `dir()`.
+- **5-variable_load.py** - Imports and prints a variable from a module.
+- **add_0.py** - Helper module containing the `add` function.
+- **calculator_1.py** - Helper module containing basic calculator functions.
 
-- [About](#about)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Built Using](#built-using)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
+```python
+from add_0 import add
 
-## 🧐 About <a name="about"></a>
+result = add(1, 2)
+print(result)
+```
 
-Write 1-2 paragraphs explaining what your Python project does, its purpose, and why it exists.
+---
 
-## 🏁 Getting Started <a name="getting-started"></a>
+## Key Concepts
 
-Instructions to get a copy of the project up and running locally for development and testing.
+- import statements
+- from/import
+- sys.argv
+- dir()
+- module namespace
+- __name__
+- variable arguments
 
-### Prerequisites
+---
 
-What you need to install Python and any libraries required:
+Repository
 
-```bash
-# Example
-pip install -r requirements.txt
-Installing
-Step by step guide to set up the development environment:
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-import_modules
 
-bash
-Copier le code
-# Clone the repo
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+---
 
-# Install dependencies
-pip install -r requirements.txt
-🎈 Usage <a name="usage"></a>
-How to run your Python project:
+Author
 
-bash
-Copier le code
-python3 main.py
-Add examples of input/output or usage scenarios here.
-
-⛏️ Built Using <a name="built-using"></a>
-Python - Programming language
-
-pip - Package manager
-
-Add any other libraries you use, e.g., requests, numpy, etc.
-
-✍️ Authors <a name="authors"></a>
-@DaRKkem - Initial work
-
-See also the list of contributors.
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

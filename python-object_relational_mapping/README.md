@@ -1,5 +1,11 @@
 # Python Object-Relational Mapping (ORM)
 
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange) ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red)
+
+```python
+cursor.execute("SELECT * FROM states ORDER BY id")
+```
+
 Bridging Python and MySQL using two approaches: raw SQL via the `MySQLdb` driver, and the `SQLAlchemy` ORM. The project focuses on CRUD operations on `states` and `cities` tables, SQL injection prevention, and model-based database interaction.
 
 ---
@@ -49,6 +55,13 @@ Bridging Python and MySQL using two approaches: raw SQL via the `MySQLdb` driver
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-object_relational_mapping
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

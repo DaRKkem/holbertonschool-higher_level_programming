@@ -1,124 +1,126 @@
+# Python File I/O & JSON Serialization
 
-<p align="center">
-  <img width="180px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<h1 align="center">Python File Handling & OOP</h1>
-
-<p align="center">
-Introduction simple à la lecture et écriture de fichiers en Python.
-</p>
+Working with file input/output operations and JSON serialization in Python. This project covers reading and writing files, working with JSON data (dump/load/dumps/loads), and implementing a Pascal's Triangle generator.
 
 ---
 
-## 📌 Description
+## Tasks / Files
 
-Ce projet explique les bases de **la manipulation de fichiers en Python** et comment automatiser la lecture, l’écriture et le traitement des données.
+### 0. Read file
+**File:** `0-read_file.py`
 
-Objectifs :
-
-- ouvrir et fermer des fichiers
-- lire le contenu complet d’un fichier
-- lire un fichier ligne par ligne
-- écrire du texte dans un fichier
-- gérer les fichiers en toute sécurité avec `with`
-- utiliser JSON pour la sérialisation et désérialisation
-- accéder aux paramètres de la ligne de commande
-
-Parfait pour comprendre la **gestion des fichiers et la sérialisation en Python**.
-
----
-
-## 📚 Concepts abordés
-
-- Lecture et écriture de fichiers (`open`, `read`, `write`)
-- Gestion de fichiers avec `with`
-- Curseur de fichier (`seek`, `tell`)
-- Fermeture automatique de fichiers
-- JSON (`json.dump`, `json.load`, `json.dumps`, `json.loads`)
-- Sérialisation et désérialisation
-- Paramètres de ligne de commande (`sys.argv`)
-- Encapsulation des opérations de fichier dans des fonctions/classes
-- Bonnes pratiques DRY
-
----
-
-## ▶️ Exemples
-
-### Écriture dans un fichier :
+Read a file and print its content to stdout.
 
 ```python
-with open("example.txt", "w") as file:
-    file.write("Bonjour, ceci est un test !
-")
-    file.write("Python rend la gestion des fichiers simple.")
+with open("file.txt", "r") as f:
+    content = f.read()
 ```
 
-### Lecture complète d’un fichier :
+### 1. Write to file
+**File:** `1-write_file.py`
 
-```python
-with open("example.txt", "r") as file:
-    content = file.read()
-    print(content)
-```
+Write a string to a file (overwriting existing content).
 
-### Lecture ligne par ligne :
+### 2. Append to file
+**File:** `2-append_write.py`
 
-```python
-with open("example.txt", "r") as file:
-    for line in file:
-        print(line.strip())
-```
+Append a string to the end of a file.
 
-### Déplacer le curseur :
+### 3. JSON to string
+**File:** `3-to_json_string.py`
 
-```python
-with open("example.txt", "r") as file:
-    file.seek(0)  # Retour au début
-    print(file.readline())
-```
+Convert a Python object to a JSON string using `json.dumps()`.
 
-### Sérialisation JSON :
+### 4. JSON from string
+**File:** `4-from_json_string.py`
+
+Convert a JSON string to a Python object using `json.loads()`.
+
+### 5. Save object to JSON file
+**File:** `5-save_to_json_file.py`
+
+Write a Python object to a JSON file using `json.dump()`.
+
+### 6. Load object from JSON file
+**File:** `6-load_from_json_file.py`
+
+Read a Python object from a JSON file using `json.load()`.
 
 ```python
 import json
 
 data = {"name": "Alice", "age": 30}
-
-# Écrire JSON dans un fichier
 with open("data.json", "w") as f:
     json.dump(data, f)
-
-# Lire JSON depuis un fichier
-with open("data.json", "r") as f:
-    loaded_data = json.load(f)
-print(loaded_data)
 ```
 
-### Paramètres de ligne de commande :
+### 7. Add items and save
+**File:** `7-add_item.py`
+
+Script that adds command-line arguments to a list and saves the list to a JSON file.
+
+### 8. Class to JSON
+**File:** `8-class_to_json.py`
+
+Return a dictionary description of a class instance for JSON serialization.
+
+### 9. Student class
+**File:** `9-student.py`
+
+Define a `Student` class with a `to_json()` method.
+
+### 10. Student with filter
+**File:** `10-student.py`
+
+Extend `Student.to_json()` to accept an optional attribute filter.
+
+### 11. Student reload from JSON
+**File:** `11-student.py`
+
+Add a `reload_from_json()` method to the `Student` class.
+
+### 12. Pascal's Triangle
+**File:** `12-pascal_triangle.py`
+
+Generate Pascal's Triangle up to `n` rows.
 
 ```python
-import sys
-
-# python3 script.py arg1 arg2
-print("Arguments:", sys.argv)
+def pascal_triangle(n):
+    if n <= 0:
+        return []
+    triangle = [[1]]
+    for i in range(1, n):
+        row = [1]
+        for j in range(1, i):
+            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+        row.append(1)
+        triangle.append(row)
+    return triangle
 ```
 
 ---
 
-🚀 Lancer le projet :
-```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-```
+## Key Concepts
 
-🛠️ Technologies
-Python 3
+- `open()`, `read()`, `write()`, `append()` file operations
+- `with` statement for automatic resource management
+- JSON module: `dump`, `load`, `dumps`, `loads`
+- File cursor positioning (`seek`, `tell`)
+- Serialization of custom objects to dictionaries
+- Pascal's Triangle algorithm (binomial coefficients)
+- Scripting with `sys.argv`
 
-Lecture et écriture de fichiers
+---
 
-JSON & sérialisation
+Repository
 
-✍️ Auteur
-Rossi Damien
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-input_output
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

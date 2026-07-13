@@ -1,199 +1,64 @@
+# Python Serialization
 
-<p align="center">
-  <img width="180px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<h1 align="center">Python File Handling & OOP</h1>
+Exploration of data serialization formats in Python. This project covers JSON, Pickle, CSV, and XML -- each serving different use cases for persisting and exchanging data between systems or across program runs.
 
-<p align="center">
-Introduction simple à la lecture et écriture de fichiers en Python.
-</p>
+---
 
-------------------------------------------------------------------------
+## Tasks / Files
 
-## 📌 Description
+### 0. Basic JSON serialization
+**File:** `task_00_basic_serialization.py`
 
-Ce projet explique les bases de la **sérialisation en Python** :\
-comment convertir des objets Python en formats stockables (JSON),\
-et comment reconstruire ces objets à partir de données sauvegardées.
+Serialize a dictionary to a JSON file and deserialize it back.
 
-Objectifs :
-
--   Comprendre la sérialisation
--   Comprendre la désérialisation
--   Convertir un objet Python en chaîne JSON
--   Sauvegarder des données sérialisées dans un fichier
--   Charger et reconstruire des objets Python depuis un fichier JSON
--   Sérialiser des objets personnalisés (classes)
--   Utiliser `sys.argv` avec des données JSON
--   Appliquer les bonnes pratiques (DRY, modularité)
-
-------------------------------------------------------------------------
-
-## 📚 Concepts abordés
-
--   Sérialisation vs Désérialisation
--   Format JSON
--   `json.dumps()` vs `json.dump()`
--   `json.loads()` vs `json.load()`
--   Conversion d'objets en dictionnaires (`__dict__`)
--   Gestion d'erreurs lors du chargement JSON
--   Stockage persistant des données
--   Paramètres de ligne de commande (`sys.argv`)
--   Encapsulation des opérations JSON dans des fonctions/classes
-
-------------------------------------------------------------------------
-
-## 🔄 Qu'est-ce que la Sérialisation ?
-
-La sérialisation est le processus qui consiste à transformer un objet
-Python en un format qui peut être :
-
--   sauvegardé dans un fichier
--   envoyé sur un réseau
--   stocké dans une base de données
-
-Schéma :
-
-Objet Python ➜ JSON (string ou fichier)
-
-### Exemple :
-
-``` python
+```python
 import json
 
 data = {"name": "Alice", "age": 30}
-
-json_string = json.dumps(data)
-print(json_string)
-```
-
-------------------------------------------------------------------------
-
-## 🔁 Qu'est-ce que la Désérialisation ?
-
-La désérialisation est le processus inverse :\
-elle permet de reconstruire un objet Python à partir de données JSON.
-
-Schéma :
-
-JSON (string ou fichier) ➜ Objet Python
-
-### Exemple :
-
-``` python
-import json
-
-json_string = '{"name": "Alice", "age": 30}'
-
-data = json.loads(json_string)
-print(data)
-print(type(data))
-```
-
-------------------------------------------------------------------------
-
-## ▶️ Exemples pratiques
-
-### 🔹 Écriture JSON dans un fichier
-
-``` python
-import json
-
-data = {"language": "Python", "level": "Intermediate"}
-
 with open("data.json", "w") as f:
     json.dump(data, f)
-```
-
-### 🔹 Lecture JSON depuis un fichier
-
-``` python
-import json
 
 with open("data.json", "r") as f:
-    loaded_data = json.load(f)
-
-print(loaded_data)
+    loaded = json.load(f)
 ```
 
-------------------------------------------------------------------------
+### 1. Pickle serialization
+**File:** `task_01_pickle.py`
 
-## 🏫 Sérialisation d'une classe personnalisée
+Serialize and deserialize Python objects using the `pickle` module (binary format). Demonstrates handling of custom class instances.
 
-``` python
-class Student:
-    def __init__(self, first_name, last_name, age):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
+### 2. CSV parsing and conversion
+**File:** `task_02_csv.py`
 
-    def to_json(self):
-        return self.__dict__
-```
+Parse a CSV file, convert rows to dictionaries, and serialize the result to JSON.
 
-### Utilisation :
+### 3. XML serialization and parsing
+**File:** `task_03_xml.py`
 
-``` python
-import json
+Generate XML from Python data and parse XML back into Python structures.
 
-student = Student("Lina", "Smith", 20)
+---
 
-json_string = json.dumps(student.to_json())
-print(json_string)
-```
+## Key Concepts
 
-------------------------------------------------------------------------
+- **JSON**: Human-readable text format, language-independent, `json.dump` / `json.load`
+- **Pickle**: Binary Python-specific format, preserves Python objects, `pickle.dump` / `pickle.load`
+- **CSV**: Tabular data format, `csv.reader` / `csv.DictReader`, conversion to JSON
+- **XML**: Hierarchical markup format, `xml.etree.ElementTree`, generation and parsing
+- Serialization format comparison: readability, security, portability
+- Data persistence patterns
 
-## 🖥️ Arguments en ligne de commande + JSON
+---
 
-``` python
-import sys
-import json
+Repository
 
-filename = "items.json"
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-serialization
 
-try:
-    with open(filename, "r") as f:
-        items = json.load(f)
-except Exception:
-    items = []
+---
 
-items.extend(sys.argv[1:])
+Author
 
-with open(filename, "w") as f:
-    json.dump(items, f)
-```
-
-Exécution :
-
-python3 script.py apple banana
-
-Résultat dans items.json :
-
-\["apple", "banana"\]
-
-------------------------------------------------------------------------
-
-## 🚀 Lancer le projet
-
-``` bash
-git clone https://github.com/yourusername/serialization-project.git
-cd serialization-project
-python3 main.py
-```
-
-------------------------------------------------------------------------
-
-## 🛠️ Technologies
-
--   Python 3
--   JSON (module standard)
--   Programmation Orientée Objet (OOP)
--   Gestion des fichiers
-
-------------------------------------------------------------------------
-
-## ✍️ Auteur
-
-Rossi Damien
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

@@ -1,74 +1,46 @@
-<p align="center">
-  <a href="" rel="noopener">
-    <img width="200px" height="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-  </a>
-</p>
+# Python Hello World
 
-<h3 align="center">Project Title</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<div align="center">
-  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-</div>
+Introduction to Python programming: basic syntax, print statements, string operations, and the Zen of Python.
 
 ---
 
-<p align="center">
-A few lines describing your Python project and its purpose.
-</p>
+## Tasks / Files
 
-## 📝 Table of Contents
+- **2-print.py** - Prints a string using `print()` with proper formatting.
+- **3-print_number.py** - Prints integers and floats using different string formatting techniques.
+- **4-print_float.py** - String indexing and slicing to manipulate and display text.
+- **5-print_string.py** - String formatting with `.format()` method.
+- **6-concat.py** - f-strings for inline variable interpolation.
+- **7-edges.py** - String edges: extracting first, last, and middle characters from a string.
+- **8-concat_edges.py** - String concatenation and repetition.
+- **9-easter_egg.py** - Easter egg: `import this` displays the Zen of Python by Tim Peters.
 
-- [About](#about)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Built Using](#built-using)
-- [Contributing](#contributing)
-- [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
+```python
+print("Hello, World!")
+```
 
-## 🧐 About <a name="about"></a>
+---
 
-Write 1-2 paragraphs explaining what your Python project does, its purpose, and why it exists.
+## Key Concepts
 
-## 🏁 Getting Started <a name="getting-started"></a>
+- print()
+- strings
+- f-strings
+- string slicing
+- string methods
+- Python philosophy (Zen of Python)
 
-Instructions to get a copy of the project up and running locally for development and testing.
+---
 
-### Prerequisites
+Repository
 
-What you need to install Python and any libraries required:
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-hello_world
 
-```bash
-# Example
-pip install -r requirements.txt
-Installing
-Step by step guide to set up the development environment:
+---
 
-bash
-Copier le code
-# Clone the repo
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+Author
 
-# Install dependencies
-pip install -r requirements.txt
-🎈 Usage <a name="usage"></a>
-How to run your Python project:
-
-bash
-Copier le code
-python3 main.py
-Add examples of input/output or usage scenarios here.
-
-⛏️ Built Using <a name="built-using"></a>
-Python - Programming language
-
-pip - Package manager
-
-Add any other libraries you use, e.g., requests, numpy, etc.
-
-✍️ Authors <a name="authors"></a>
-@DaRKkem - Initial work
-
-See also the list of contributors.
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

@@ -1,5 +1,7 @@
 # Higher-Level Programming -- Python, SQL, and JavaScript
 
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow) ![License](https://img.shields.io/badge/License-Holberton-yellow)
+
 This repository contains the Higher-Level Programming curriculum at Holberton School, covering Python, SQL, and JavaScript. The curriculum spans from fundamental programming concepts through advanced object-oriented design, database management, data serialization, REST API development, and front-end DOM manipulation.
 
 ## Sub-Projects
@@ -42,4 +44,12 @@ This repository contains the Higher-Level Programming curriculum at Holberton Sc
 
 ---
 
-**Author:** Damien Rossi - **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+Repository
+
+GitHub repository: holbertonschool-higher_level_programming
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

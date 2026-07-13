@@ -1,5 +1,11 @@
 # Python -- Everything is an Object
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+
+```python
+print(id([1, 2, 3]))  # memory address
+```
+
 A quiz-style project that explores Python's object model -- mutability, references, identity, and memory management. Inspired by the article "Everything is an Object" in Python, it consists of 29 short-answer questions plus one small coding task.
 
 ---
@@ -41,6 +47,13 @@ Alternative approaches: `list(l)`, `l.copy()`, or `copy.deepcopy(l)`.
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-everything_is_object
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

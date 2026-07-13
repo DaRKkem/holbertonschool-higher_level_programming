@@ -1,5 +1,11 @@
 # Python Server-Side Rendering
 
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![Flask](https://img.shields.io/badge/Flask-3.x-lightgrey)
+
+```python
+from flask import Flask, render_template
+```
+
 An introduction to generating dynamic HTML content on the server. The project moves from basic string template substitution through Jinja2 templating, conditionals and loops in templates, loading data from CSV/JSON files, and finally querying a SQLite database to render HTML pages.
 
 ---
@@ -49,6 +55,13 @@ An introduction to generating dynamic HTML content on the server. The project mo
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-server_side_rendering
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

@@ -1,58 +1,47 @@
-<p align="center">
-  <img width="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# Python Exceptions
 
-<h3 align="center">Python Data Structures</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
----
-
-## 📌 Description
-
-Ce projet présente les **structures de données en Python**, principalement les **listes**, ainsi que leurs méthodes courantes comme `.append()`, `.remove()`, `.pop()`, etc.  
-Il est destiné aux débutants souhaitant comprendre les bases de la manipulation de données en Python.
+Error handling in Python: using try/except blocks, raising exceptions, and writing robust code.
 
 ---
 
-## 📚 Structures abordées
+## Tasks / Files
 
-- Listes (`list`)
-- Dictionnaires (`dict`)
-- Tuples (`tuple`)
-- Ensembles (`set`)
-
----
-
-## ▶️ Exemples d'utilisation
-
-### Listes
+- **0-safe_print_list.py** - Safely prints a list using try/except.
+- **1-safe_print_integer.py** - Safely prints an integer with type checking.
+- **2-safe_print_list_integers.py** - Prints only integers from a list.
+- **3-safe_print_division.py** - Performs division with try/except/else/finally.
+- **4-list_division.py** - Divides two lists element-wise with error handling.
+- **5-raise_exception.py** - Raises a custom exception.
+- **6-raise_exception_msg.py** - Raises an exception with a custom message.
 
 ```python
-numbers = [1, 2, 3]
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
 
-numbers.append(4)
-numbers.remove(2)
+---
 
-print(numbers)
-Dictionnaires
-python
-Copier le code
-user = {
-    "name": "Alice",
-    "age": 25
-}
+## Key Concepts
 
-user["age"] = 26
-print(user)
-🚀 Lancer le projet
-bash
-Copier le code
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-🛠️ Technologies
-Python 3
+- try/except
+- else/finally
+- raising exceptions
+- exception types (TypeError, ValueError, ZeroDivisionError)
+- exception messages
 
-Structures de données natives
+---
 
-✍️ Auteur
-DaRKkem
+Repository
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-exceptions
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

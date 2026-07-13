@@ -1,58 +1,52 @@
-<p align="center">
-  <img width="200px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# Python More Data Structures
 
-<h3 align="center">Python Data Structures</h3>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
----
-
-## 📌 Description
-
-Ce projet présente les **structures de données en Python**, principalement les **listes**, ainsi que leurs méthodes courantes comme `.append()`, `.remove()`, `.pop()`, etc.  
-Il est destiné aux débutants souhaitant comprendre les bases de la manipulation de données en Python.
+Advanced data structure operations: sets, dictionaries, lambda functions, map/filter, and algorithmic problem-solving.
 
 ---
 
-## 📚 Structures abordées
+## Tasks / Files
 
-- Listes (`list`)
-- Dictionnaires (`dict`)
-- Tuples (`tuple`)
-- Ensembles (`set`)
-
----
-
-## ▶️ Exemples d'utilisation
-
-### Listes
+- **0-square_matrix_simple.py** - Computes the square value of all integers in a matrix.
+- **1-search_replace.py** - Replaces all occurrences of an element in a list.
+- **2-uniq_add.py** - Adds all unique integers in a list.
+- **3-common_elements.py** - Returns the common elements between two sets.
+- **4-only_diff_elements.py** - Returns elements present in only one of two sets.
+- **5-number_of_keys.py** - Returns the number of keys in a dictionary.
+- **6-print_sorted_dictionary.py** - Prints a dictionary sorted by keys.
+- **7-update_dictionary.py** - Updates or adds key/value pairs in a dictionary.
+- **8-simple_delete.py** - Deletes a key from a dictionary.
+- **9-multiply_by_2.py** - Multiplies all values in a dictionary by 2.
+- **10-best_score.py** - Returns the key with the biggest integer value.
+- **11-multiply_list_map.py** - Multiplies all list elements using map and lambda.
+- **12-roman_to_int.py** - Converts a Roman numeral string to an integer.
 
 ```python
-numbers = [1, 2, 3]
+squared = list(map(lambda x: x**2, matrix))
+```
 
-numbers.append(4)
-numbers.remove(2)
+---
 
-print(numbers)
-Dictionnaires
-python
-Copier le code
-user = {
-    "name": "Alice",
-    "age": 25
-}
+## Key Concepts
 
-user["age"] = 26
-print(user)
-🚀 Lancer le projet
-bash
-Copier le code
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-🛠️ Technologies
-Python 3
+- map
+- filter
+- lambda
+- set operations (intersection, difference)
+- dictionary methods
+- Roman numeral conversion
+- list comprehensions
 
-Structures de données natives
+---
 
-✍️ Auteur
-DaRKkem
+Repository
+
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-more_data_structures
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

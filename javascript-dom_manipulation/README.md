@@ -1,5 +1,11 @@
 # JavaScript DOM Manipulation
 
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow) ![HTML5](https://img.shields.io/badge/HTML5-semantic-orange)
+
+```js
+document.querySelector('header').style.color = '#FF0000';
+```
+
 Nine tasks pairing HTML pages with JavaScript scripts to progressively explore the Document Object Model. Starting from simple style changes with `document.querySelector`, the exercises advance through event listeners, element creation, and dynamic API-driven content.
 
 ---
@@ -47,6 +53,13 @@ Nine tasks pairing HTML pages with JavaScript scripts to progressively explore t
 
 ---
 
-## Author
+Repository
 
-**Damien Rossi** -- **[DaRKkem](https://github.com/DaRKkem)** -- Holberton School, cohort C28, Auvergne-Rhone-Alpes
+GitHub repository: holbertonschool-higher_level_programming
+Directory: javascript-dom_manipulation
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

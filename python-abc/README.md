@@ -1,47 +1,17 @@
-<p align="center">
-  <img width="180px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# Python Abstract Base Classes & Design Patterns
 
-<h1 align="center">Python Advanced OOP & Design Patterns</h1>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<p align="center">
-Introduction simple aux concepts avancés de la Programmation Orientée Objet (OOP) en Python.
-</p>
+Study of abstract base classes (ABCs), duck typing, multiple inheritance, and mixins in Python. The project demonstrates how to enforce interface contracts, wrap iterators, subclass built-in types, and compose behavior through mixin classes.
 
 ---
 
-## 📌 Description
+## Tasks / Files
 
-Ce projet explore des notions **plus avancées de la POO Python** :
+### 0. Abstract Base Class
+**File:** `task_00_abc.py`
 
-- classes abstraites (ABC)
-- héritage et polymorphisme
-- duck typing
-- extension de classes natives (list, iterator…)
-- itérateurs personnalisés
-- héritage multiple
-- mixins
-
-Parfait pour comprendre **comment Python structure les objets complexes** dans des projets réels.
-
----
-
-## 📚 Concepts abordés
-
-- Abstract Base Classes (`ABC`, `@abstractmethod`)
-- Duck Typing
-- Héritage simple & multiple
-- Extension de classes natives
-- Itérateurs personnalisés
-- Mixins
-- Polymorphisme
-- Méthodes spéciales (`__iter__`, `__next__`, `__str__`, etc.)
-
----
-
-## ▶️ Exemples
-
-### Classe abstraite (ABC)
+Define an abstract class using `ABC` and `abstractmethod`.
 
 ```python
 from abc import ABC, abstractmethod
@@ -50,92 +20,64 @@ class Animal(ABC):
     @abstractmethod
     def sound(self):
         pass
-```
 
-### Implémentation concrète
-
-```python
 class Dog(Animal):
     def sound(self):
         return "Bark"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow"
 ```
 
-### Duck Typing
-```python
-class Bird:
-    def fly(self):
-        print("Flying")
+### 1. Duck typing
+**File:** `task_01_duck_typing.py`
 
-class Plane:
-    def fly(self):
-        print("Also flying")
+Demonstrate duck typing by defining shapes (`Circle`, `Rectangle`) that implement a common interface without inheritance.
 
-def make_it_fly(obj):
-    obj.fly()
-```
+### 2. VerboseList
+**File:** `task_02_verboselist.py`
 
-### Extending the Python List with Notifications
-```python
-class NotifyingList(list):
-    def append(self, item):
-        super().append(item)
-        print("Item added:", item)
-```
+Subclass the built-in `list` to print a message on every mutation (`append`, `extend`, `remove`, `pop`).
 
-### CountedIterator — Keeping Track of Iteration
-```python
-class CountedIterator:
-    def __init__(self, data):
-        self.data = data
-        self.index = 0
+### 3. CountedIterator
+**File:** `task_03_countediterator.py`
 
-    def __iter__(self):
-        return self
+Wrap an iterable in an iterator class that counts how many items have been retrieved.
 
-    def __next__(self):
-        if self.index >= len(self.data):
-            raise StopIteration
-        value = self.data[self.index]
-        self.index += 1
-        return value
-```
+### 4. FlyingFish (multiple inheritance)
+**File:** `task_04_flyingfish.py`
 
-### The Enigmatic FlyingFish — Multiple ### Inheritance
-```python
-class Swimmer:
-    def swim(self):
-        return "Swimming"
+Create a `FlyingFish` class that inherits from both `Fish` and `Bird`, demonstrating the diamond problem and MRO (Method Resolution Order).
 
-class Flyer:
-    def fly(self):
-        return "Flying"
+### 5. Dragon (mixins)
+**File:** `task_05_dragon.py`
 
-class FlyingFish(Swimmer, Flyer):
-    pass
-```
+Create `SwimMixin` and `FlyMixin` classes with `swim()` and `fly()` methods, then compose them into a `Dragon` class.
 
-### The Mystical Dragon — Mixins
-```python
-class FireMixin:
-    def breathe_fire(self):
-        return "Fire breath!"
+---
 
-class Dragon(FireMixin):
-    def roar(self):
-        return "Roar!"
-```
+## Key Concepts
 
-🚀 Lancer le projet :
-```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-```
-🛠️ Technologies
-Python 3
+- `ABC` (`from abc import ABC, abstractmethod`)
+- `@abstractmethod` decorator for enforcing implementation
+- Duck typing: "if it walks like a duck and quacks like a duck..."
+- Multiple inheritance with `class Child(Parent1, Parent2):`
+- Mixins for composing reusable behavior
+- Iterator protocol (`__iter__`, `__next__`)
+- Subclassing built-in types (e.g., `list`)
+- `super()` resolution in diamond hierarchies (MRO)
+- Design for interface contracts
 
+---
 
-Programmation Orientée Objet (OOP)
+Repository
 
-✍️ Auteur
-DaRKkem
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-abc
+
+---
+
+Author
+
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes

@@ -1,104 +1,95 @@
-<p align="center">
-  <img width="180px" src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
-</p>
+# Python Inheritance
 
-<h1 align="center">Python Inheritance & OOP</h1>
+![Python](https://img.shields.io/badge/Python-3.12-blue) ![License](https://img.shields.io/badge/License-Holberton-yellow)
 
-<p align="center">
-Introduction simple à l’héritage (Inheritance) en Programmation Orientée Objet avec Python.
-</p>
+Exploration of class inheritance in Python. The project builds a hierarchy from a `BaseGeometry` class down to `Rectangle` and `Square`, demonstrating method overriding, validation through base classes, and the use of `super()`, `isinstance()`, and `issubclass()`.
 
 ---
 
-## 📌 Description
+## Tasks / Files
 
-Ce projet explique les bases de **l’héritage en Python** et comment créer des classes qui réutilisent le code d’autres classes.
+### 0. Lookup
+**File:** `0-lookup.py`
 
-Objectifs :
+Returns a list of available attributes and methods of an object using `dir()`.
 
-- créer des classes parentes (superclasses)
-- créer des classes enfants (subclasses)
-- réutiliser du code existant
-- redéfinir des méthodes
-- comprendre `super()`
-- appliquer la logique DRY (Don't Repeat Yourself)
+```python
+def lookup(obj):
+    return dir(obj)
+```
 
-Parfait pour comprendre la **POO avancée** en Python.
+### 1. `isinstance` / `issubclass` checks
+**File:** `1-my_list.py`
+
+Create a `MyList` class that inherits from `list` with a `print_sorted()` method.
+
+### 2. BaseGeometry class
+**File:** `2-base_geometry.py`
+
+Create a `BaseGeometry` class with an `area()` method that raises an exception.
+
+```python
+class BaseGeometry:
+    def area(self):
+        raise Exception("area() is not implemented")
+```
+
+### 3. Integer validator
+**File:** `3-base_geometry.py`
+
+Add `integer_validator(name, value)` to `BaseGeometry` that validates value is a positive integer.
+
+### 4. Rectangle inherits from BaseGeometry
+**File:** `4-rectangle.py`
+
+Create a `Rectangle` class that inherits from `BaseGeometry`.
+
+```python
+class Rectangle(BaseGeometry):
+    def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
+```
+
+### 5 - 8. Rectangle improvements
+**Files:** `5-rectangle.py` through `8-rectangle.py`
+
+Add `area()`, `__str__`, and `__repr__` to Rectangle.
+
+### 9. Square inherits from Rectangle
+**File:** `9-square.py`
+
+Create a `Square` class that inherits from `Rectangle`.
+
+### 10 - 11. Square improvements
+**Files:** `10-square.py`, `11-square.py`
+
+Add `__str__` to Square and ensure proper integration with the geometry hierarchy.
 
 ---
 
-## 📚 Concepts abordés
+## Key Concepts
 
-- Héritage (Inheritance)
-- Classes parentes / enfants
-- Réutilisation de code
-- `super()`
-- Override (redéfinition de méthodes)
-- Polymorphisme
-- `isinstance()` / `issubclass()`
-- Encapsulation
-- Méthodes spéciales (`__str__`, `__repr__`)
+- Inheritance: `class Child(Parent)`
+- `super()` to call parent class methods
+- `isinstance(obj, class)` for type checking
+- `issubclass(child, parent)` for subclass checking
+- Method overriding in child classes
+- Base class validation with `integer_validator`
+- Exception raising for unimplemented methods
+- Chained inheritance: `Square` -> `Rectangle` -> `BaseGeometry`
 
 ---
 
-## ▶️ Exemples
+Repository
 
-### Classe parente :
+GitHub repository: holbertonschool-higher_level_programming
+Directory: python-inheritance
 
-```python
-class Animal:
-    def __init__(self, name):
-        self.name = name
+---
 
-    def speak(self):
-        return "Some sound"
-```
+Author
 
-### Classe enfant (héritage) :
-```python
-class Dog(Animal):
-    pass
-```
-Dog hérite automatiquement de name et speak().
-
-### Override d’une méthode :
-```python
-class Dog(Animal):
-    def speak(self):
-        return "Woof!"
-```
-On redéfinit le comportement de la classe parente.
-
-### Utilisation de super() :
-```python
-class Dog(Animal):
-    def __init__(self, name, breed):
-        super().__init__(name)
-        self.breed = breed
-super() permet d’appeler le constructeur de la classe parente.
-```
-
-### Utilisation :
-```python
-dog = Dog("Rex", "Labrador")
-
-print(dog.name)
-print(dog.speak())%
-```
-
-🚀 Lancer le projet :
-```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
-python3 main.py
-```
-
-🛠️ Technologies
-Python 3
-
-Programmation Orientée Objet (OOP)
-
-Inheritance & Polymorphism
-
-✍️ Auteur
-Rossi Damien
+Damien Rossi - DaRKkem — Holberton School, cohort C28, Auvergne-Rhône-Alpes
